@@ -18,12 +18,18 @@ function createWindow(): void {
     },
     title: 'Note Mark',
     titleBarStyle: 'hidden',
-    frame: false,
-    titleBarOverlay: {
-      color: '#00000000', // Transparent background with alpha channel
-      symbolColor: '#ffffff', // Black buttons
-      height: 30
-    }
+    frame: false
+    // titleBarOverlay: {
+    //   color: '#00000000', // Transparent background with alpha channel
+    //   symbolColor: '#ffffff', // Black buttons
+    //   height: 30
+    // }
+    // ...(process.platform === 'win32'
+    //   ? {
+    //       backgroundMaterial: 'acrylic',
+    //       titleBarStyle: 'default'
+    //     }
+    //   : {})
   })
 
   mainWindow.on('ready-to-show', () => {
