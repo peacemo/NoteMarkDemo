@@ -15,6 +15,14 @@ function createWindow(): void {
       preload: join(__dirname, '../preload/index.js'),
       sandbox: true,
       contextIsolation: true
+    },
+    title: 'Note Mark',
+    titleBarStyle: 'hidden',
+    frame: false,
+    titleBarOverlay: {
+      color: '#00000000', // Transparent background with alpha channel
+      symbolColor: '#ffffff', // Black buttons
+      height: 30
     }
   })
 
