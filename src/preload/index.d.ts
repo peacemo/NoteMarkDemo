@@ -1,8 +1,6 @@
-import { ElectronAPI } from '@electron-toolkit/preload'
-
 declare global {
   interface Window {
-    electron: ElectronAPI
-    api: unknown
+    // electron: ElectronAPI
+    context: {} // define the context in the index.ts (same type).
   }
 }
