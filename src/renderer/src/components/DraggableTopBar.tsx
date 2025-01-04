@@ -1,5 +1,6 @@
 import { ComponentProps } from 'react'
-import { SlArrowDown, SlArrowUp, SlClose } from 'react-icons/sl'
+import { IoClose } from 'react-icons/io5'
+import { SlArrowDown, SlArrowUp } from 'react-icons/sl'
 import { twMerge } from 'tailwind-merge'
 
 export const DraggableTopBar = () => {
@@ -14,7 +15,7 @@ const WindowButton = ({ children, className, ...props }: ComponentProps<'button'
   return (
     <button
       className={twMerge(
-        'px-1 py-1 rounded-full border border-zinc-400 hover:bg-zinc-600 transition-colors duration-100',
+        'px-1 py-1 rounded-full border border-zinc-400 transition-colors duration-100',
         className
       )}
       {...props}
@@ -43,7 +44,7 @@ const MaximizeButton = ({ ...props }: ComponentProps<'button'>) => {
 const CloseButton = ({ ...props }: ComponentProps<'button'>) => {
   return (
     <WindowButton {...props}>
-      <SlClose className="w-2 h-2" />
+      <IoClose className="w-2 h-2" />
     </WindowButton>
   )
 }
@@ -52,9 +53,9 @@ const WindowButtonsRow = ({ ...props }: ComponentProps<'div'>) => {
   // TODO add call back to minimize window
   return (
     <div {...props}>
-      <MinimizeButton className="m-1" />
-      <MaximizeButton className="m-1" />
-      <CloseButton className="m-1" />
+      <MinimizeButton className="m-1 hover:bg-zinc-600" />
+      <MaximizeButton className="m-1 hover:bg-zinc-600" />
+      <CloseButton className="m-1 hover:bg-red-500" />
     </div>
   )
 }
