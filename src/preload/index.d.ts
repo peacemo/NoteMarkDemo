@@ -1,6 +1,8 @@
 declare global {
   interface Window {
     // electron: ElectronAPI
-    context: {} // define the context in the index.ts (same type).
+    context: {
+      locale: string
+    } // define the context in the index.ts (same type).
   }
 }
