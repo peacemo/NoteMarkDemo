@@ -5,7 +5,7 @@ export const ActionButtonsRow = ({ ...props }: ComponentProps<'div'>) => {
   return (
     <div {...props}>
       <NewNoteButton />
-      <DeleteNoteButton />
+      <DeleteNoteButton className="hover:bg-red-500" />
     </div>
   )
 }
